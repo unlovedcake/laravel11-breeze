@@ -54,7 +54,9 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-
+                                        <div class="d-flex justify-content-center">
+                                            {!! $products->appends(request()->query())->links() !!}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -63,5 +65,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </x-app-layout>

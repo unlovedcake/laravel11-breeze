@@ -17,7 +17,10 @@ class HomeController extends Controller
 
 
         if (Auth::id()) {
-            $products = Product::get();
+
+
+            $products = Product::orderBy('id', 'asc')->paginate(5);
+
 
             $userType = Auth()->user()->user_type;
 
